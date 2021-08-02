@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<h1 id="customers">Cafe Shopee</h1>
+<form action="/submitorder" method="POST" id="submitorder">
+  <label for="cname">Enter name:</label>
+  <input type="text" id="fname" name="fname"><br>
+  <br>
+  <table width="80%"  id="customers" >
+    <tr>
+      <th>Food Item</th>
+      <th> Order </th>
+      <th>Quantity</th>
+    </tr>
+    <tr> 
+      <td>Item 1:</td> 
+      <td>
+	<select name = item1 id="item1">
+	  <option value="1">--Select Item--</option> 
+	  <option value="Cappuccino">Cappuccino</option> 
+	  <option value="Cold Coffee">Cold Coffee</option> 
+	  <option value="Hot Coffee">Hot Coffee</option> 
+	</select>
+      </td>
+      <td><input type="number" value="0" name = q1 id="q1"></td>
+    </tr>
+     <tr> 
+      <td>Item 2:</td> 
+      <td>
+	<select name = item2 id="item2">
+	  <option value="2">--Select Item--</option> 
+	  <option value="Cappuccino">Cappuccino</option> 
+	  <option value="Cold Coffee">Cold Coffee</option> 
+	  <option value="Hot Coffee">Hot Coffee</option> 
+	</select>
+      </td> 
+      <td><input type="number" value="0" name = q2 id="q2"></td>
+     </tr>
+      <tr> 
+      <td>Item 3:</td> 
+      <td>
+	<select name = item3 id="item3">
+	  <option value="3">--Select Item--</option> 
+	  <option value="Cappuccino">Cappuccino</option> 
+	  <option value="Cold Coffee">Cold Coffee</option> 
+	  <option value="Hot Coffee">Hot Coffee</option> 
+	</select>
+      </td> 
+      <td><input type="number" value="0" name = q3 id="q3"></td>
+    </tr>
+    <tr>
+      <td></td> 
+      <td><input type="submit" class="button" value="Create Bill"></td>
+      <td><input type="reset" class="button" value="Clear"></td>
+    </tr>
+  </table>
+</form>
+<a href="/"> Home </a>
+{% endblock %}

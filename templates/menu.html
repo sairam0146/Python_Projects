@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<h1 id="customers">Cafe Shopee</h1>
+<table id="customers">
+  <tr>
+    <th>Food Name</th>
+    <th>Quantity</th>
+    <th>Price(INR)</th>
+  </tr>
+  <tr>
+    <td>Cappuccino</td>
+    <td>1</td>
+    <td>120</td>
+  </tr>
+  <tr>
+    <td>Cold Coffee</td>
+    <td>1</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>Hot Coffee</td>
+    <td>1</td>
+    <td>80</td>
+  </tr>
+</table>
+<br>
+<a href="/orderform">Place New Order</a> &nbsp;&nbsp;&nbsp;
+<a href="/displayorders">View Existing Orders</a>
+{% endblock %}

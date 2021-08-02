@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<h1 id="customers">Cafe Shopee</h1>
+  <table width="80%"  id="customers" >
+    <tr>
+      <th>Order ID</th>
+      <th>Customer Name</th>
+      <th>Ordered Items</th>
+      <th>Price</th>
+      <th>Order Time</th>
+      <th>Actions</th>
+    </tr>
+    {% for orders in orders %}
+    <tr>
+      <td>{{orders.id}}</td>
+      <td>{{orders.name}}</td>
+      <td>{{orders.food_items}}</td>
+      <td>{{orders.bill_amount}}</td>
+      <td>{{orders.time_of_order}}</td>
+      <td>
+	<a href="/deleteorder/{{orders.id}}">Delete Order</a>
+	<br>
+	<a href="/updateorder/{{orders.id}}">Update Order</a>
+      </td>
+    </tr>
+
+    {% endfor %}
+  </table>
+<br>
+<a href="/"> Home </a>
+{% endblock %}
