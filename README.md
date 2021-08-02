@@ -1,4 +1,4 @@
-# Python_Projects
+# Python Sample Projects
 Practice Projects in Python
 
 A simple Single page Cafe Shop application which involves CRUD operations as below:
